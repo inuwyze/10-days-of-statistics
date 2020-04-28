@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from math import sqrt 
+l=int(input())
+nums=list(map(int,input().split()))
+mean=sum(nums)/l
+print(sqrt(sum([(x-mean)**2 for x in nums])/l))

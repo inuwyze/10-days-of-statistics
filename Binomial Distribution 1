@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+p,q=[float(i) for i input().split()]
+c=p+q
+p/=c
+q/=c
+# print(p,q)
+n=6
+bd=sum([(math.factorial(n)/(math.factorial(x)*math.factorial(n-x)))*p**x*q**(n-x) for x in range(3,7)])
+print(round(bd,3))

@@ -1,0 +1,7 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+l=int(input())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+
+print(f'{sum([x*y for x,y in zip(a,b)])/sum(b):.1f}')

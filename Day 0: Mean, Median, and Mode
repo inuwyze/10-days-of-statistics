@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l=int(input())
+inp=list(map(int,input().split()))
+inp.sort()
+
+mean=sum(inp)/l
+print(mean)
+median=inp[l//2]
+if l%2==0:
+    median+=inp[l//2-1]
+
+
+print(median/2)
+
+inp_set=sorted(set(inp))
+
+ind=0
+mode=0
+for x in inp_set:
+    if inp.count(x)>ind:
+        ind=inp.count(x)
+        mode=x
+print(mode)

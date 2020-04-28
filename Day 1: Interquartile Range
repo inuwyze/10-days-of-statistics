@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l=int(input())
+a=list(map(float,input().split()))
+
+b=list(map(int,input().split()))
+nums=[a[i] for i,y in enumerate(b) for x in range(y)]
+nums.sort()
+# print(nums)
+
+l=len(nums)
+
+if l%4>1:
+    q1=nums[l//4]
+    q3=nums[l-l//4-1]
+else:
+    
+    # print(l//4,l-l//4)
+    q1=(nums[l//4]+nums[l//4-1])/2
+    q3=(nums[l-l//4]+nums[l-l//4+1])/2
+
+    
+# print(l,q1,q3)
+print(q3-q1)

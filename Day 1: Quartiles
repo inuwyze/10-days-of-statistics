@@ -1,0 +1,28 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+l=int(input())
+nums=list(map(int,input().split()))
+nums.sort()
+# print(nums)
+
+if l%2:
+    median=nums[l//2]
+    
+    
+
+else: 
+    median=(nums[l//2]+nums[l//2-1])//2
+if l%4>1:
+    # wide
+    
+    q1=nums[l//4]
+    q3=nums[l-l//4-1]
+else:
+    # print(l//2)
+    q1=(nums[l//4]+nums[l//4-1])//2
+    q3=(nums[l-l//4]+nums[l-l//4-1])//2
+
+print(q1)
+print(median)
+print(q3)
+
+
